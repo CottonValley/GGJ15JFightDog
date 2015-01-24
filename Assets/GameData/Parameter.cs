@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using UnityEngine;
 
 public class Parameter {
 	public int MaxHp = 15;
@@ -26,6 +27,10 @@ public class Parameter {
 		return step;
 	}
 
+	public int GetMaxHp(){
+		return MaxHp;
+	}
+
 	public int AddHp(int add){
 		if(add < 0) return hp;
 		hp += add;
@@ -37,6 +42,7 @@ public class Parameter {
 		if(damage < 0) return hp;
 		hp -=damage;
 		if(hp < 0) hp = 0;
+		Debug.Log (hp);
 		return hp;
 	}
 

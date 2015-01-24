@@ -22,8 +22,10 @@ public class PlayerFunctionScript : MonoBehaviour {
     private float prePositionX = 0;
     private float prePositionZ = 0;
 
+	private Parameter gameParameter;
 	// Use this for initialization
 	void Start () {
+		gameParameter = Parameter.instance;
         myPositionX = transform.position.x;
         myPositionZ = transform.position.y;
 	}
@@ -117,6 +119,10 @@ public class PlayerFunctionScript : MonoBehaviour {
             TurnInit(1);
         }
 
+		if (Input.GetKeyDown (KeyCode.Space)) {
+			gameParameter.DamageHp(2);
+		}
+
         
     }
     
@@ -137,7 +143,7 @@ public class PlayerFunctionScript : MonoBehaviour {
     void OnTriggerExit(Collider col) {
 
         myForwardState = ForwardState.None;
-		Debug.Log ("?");
+
     }
 
 }
