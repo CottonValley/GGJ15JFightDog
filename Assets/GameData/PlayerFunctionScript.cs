@@ -60,6 +60,8 @@ public class PlayerFunctionScript : MonoBehaviour {
             wantAngle = transform.localEulerAngles.y + 90f;
         }
 
+		GetComponent<BoxCollider>().enabled = false;
+
     }
 
 	void Turn() {
@@ -70,6 +72,7 @@ public class PlayerFunctionScript : MonoBehaviour {
             new Vector3(0, turnAngle,  0);
 
         if ( rotateRatio >= 1f ) {
+			GetComponent<BoxCollider>().enabled = true;
             ChangeState( PlayerState.Waiting );
         }
 
@@ -127,14 +130,14 @@ public class PlayerFunctionScript : MonoBehaviour {
     void OnTriggerEnter(Collider col){
 
         myForwardState = ForwardState.Exist;
-        Debug.Log ("!");
+        Debug.Log (col.name);
 
     }
 
     void OnTriggerExit(Collider col) {
 
         myForwardState = ForwardState.None;
-
+		Debug.Log ("?");
     }
 
 }
