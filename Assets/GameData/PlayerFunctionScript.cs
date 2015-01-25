@@ -30,6 +30,9 @@ public class PlayerFunctionScript : MonoBehaviour {
 		gameParameter = Parameter.instance;
         myPositionX = transform.position.x;
         myPositionZ = transform.position.y;
+
+		AudioController.instance.PlayBGM("bgm002");
+
 	}
 	
 	// Update is called once per frame
@@ -90,6 +93,7 @@ public class PlayerFunctionScript : MonoBehaviour {
 
         wantPosition = transform.localPosition + transform.TransformDirection(0,0,1);
         pointRatio = 0;
+		AudioController.instance.PlaySE("SEwalk");
 
     }
 

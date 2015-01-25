@@ -2,7 +2,7 @@
 using UnityEngine;
 
 public class Parameter {
-	public int MaxHp = 60;
+	public int MaxHp = 50;
 	private int hp = 0;
 	private int step = 0;
 
