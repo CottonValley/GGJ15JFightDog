@@ -18,6 +18,7 @@ public class ResultManeger : MonoBehaviour {
 		var image = GameObject.Find("BGImage").GetComponent<Image>();
 		if( Parameter.instance.gameClear ){
 			image.sprite = clearSprite;
+			AudioController.instance.PlayBGM("bgmEnd");
 		}
 		else{
 			image.sprite = gameoverSprite;

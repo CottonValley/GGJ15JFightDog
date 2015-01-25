@@ -38,6 +38,8 @@ public class AudioController  {
 		audioClips.Add( "SEshock", new AudioClipInfo( "shock2", "SEshock" ) );
 		audioClips.Add( "bgm001", new AudioClipInfo( "game01", "bgm001" ) );
 		audioClips.Add( "bgm002", new AudioClipInfo( "bgm_catche", "bgm002" ) );
+		audioClips.Add( "bgm003", new AudioClipInfo( "Sunrise", "bgm003" ) );
+		audioClips.Add( "bgmEnd", new AudioClipInfo( "happyend", "bgmEnd" ) );
 	}
 
 	public bool PlaySE(string seName){
