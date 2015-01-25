@@ -3,6 +3,8 @@ using System.Collections;
 
 public class PlayerFunctionScript : MonoBehaviour {
 
+	public GameObject AshiatoPrefab;
+
     enum PlayerState{
         Waiting = 0,
         Moving = 1,
@@ -106,6 +108,8 @@ public class PlayerFunctionScript : MonoBehaviour {
 
         if(Input.GetKeyDown(KeyCode.UpArrow) && myForwardState == ForwardState.None ){
             ChangeState(PlayerState.Moving);
+			gameParameter.DamageHp(1);
+			Instantiate (AshiatoPrefab, transform.position - new Vector3(0,1,0), transform.localRotation);
             MoveInit();
         }
 
@@ -120,7 +124,7 @@ public class PlayerFunctionScript : MonoBehaviour {
         }
 
 		if (Input.GetKeyDown (KeyCode.Space)) {
-			gameParameter.DamageHp(2);
+			gameParameter.DamageHp(10);
 		}
 
         
@@ -134,10 +138,11 @@ public class PlayerFunctionScript : MonoBehaviour {
     }
 
     void OnTriggerEnter(Collider col){
-
-        myForwardState = ForwardState.Exist;
-        Debug.Log (col.name);
-
+		if (col.tag != "Item") {
+			myForwardState = ForwardState.Exist;
+			Debug.Log (col.name);
+		}
+		
     }
 
     void OnTriggerExit(Collider col) {
