@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Parameter {
 	public int MaxHp = 50;
+	public bool gameClear = false;
 	private int hp = 0;
 	private int step = 0;
 

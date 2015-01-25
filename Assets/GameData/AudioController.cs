@@ -35,6 +35,7 @@ public class AudioController  {
 		audioClips.Add( "SEcrow", new AudioClipInfo( "crow", "SEcrow" ) );
 		audioClips.Add( "SEdog", new AudioClipInfo( "dog", "SEdog" ) );
 		audioClips.Add( "SEwalk", new AudioClipInfo( "walk", "SEwalk" ) );
+		audioClips.Add( "SEshock", new AudioClipInfo( "shock2", "SEshock" ) );
 		audioClips.Add( "bgm001", new AudioClipInfo( "game01", "bgm001" ) );
 		audioClips.Add( "bgm002", new AudioClipInfo( "bgm_catche", "bgm002" ) );
 	}
