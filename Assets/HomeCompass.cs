@@ -36,6 +36,7 @@ public class HomeCompass : MonoBehaviour {
 
 		if (Input.GetKey(KeyCode.Space) && !setFlag){
 			setFlag = true;
+			Parameter.instance.DamageHp(10);
 			ViewCompass();
 		}
 

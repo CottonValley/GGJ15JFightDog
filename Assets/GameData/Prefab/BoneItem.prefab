@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 497438}
   - 212: {fileID: 21297438}
   - 114: {fileID: 11497438}
+  - 65: {fileID: 6539190}
   m_Layer: 0
   m_Name: BoneItem
   m_TagString: Item
@@ -29,6 +30,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!65 &6539190
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197438}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .800000012, y: .800000012, z: .800000012}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &11497438
 MonoBehaviour:
   m_ObjectHideFlags: 1

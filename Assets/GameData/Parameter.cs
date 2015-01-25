@@ -16,6 +16,7 @@ public class Parameter {
 	}
 
 	public void Clear(){
+		gameClear = false;
 		hp = MaxHp;
 		step = 0;
 	}
@@ -42,7 +43,10 @@ public class Parameter {
 	public int DamageHp(int damage){
 		if(damage < 0) return hp;
 		hp -=damage;
-		if(hp < 0) hp = 0;
+		if (hp <= 0) {
+			hp = 0;
+			Application.LoadLevel("Result");
+		}
 		Debug.Log (hp);
 		return hp;
 	}

@@ -127,7 +127,7 @@ public class PlayerFunctionScript : MonoBehaviour {
             TurnInit(1);
         }
 
-		if (Input.GetKeyDown (KeyCode.Space)) {
+		if (Input.GetKeyDown (KeyCode.Space) && myState == PlayerState.Waiting) {
 			gameParameter.DamageHp(10);
 		}
 
