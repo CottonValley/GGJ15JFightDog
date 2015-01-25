@@ -25,6 +25,11 @@ public class ExplainBoardScript : MonoBehaviour {
 //			myImageColor.a = myImageColor.a - 0.01f;
 //			myImage.color = myImageColor;
 //		}
+
+		if (Input.GetKeyDown (KeyCode.Space)) {
+			disappearFlag = true;
+		}
+
 		if (disappearFlag) {
 			Destroy(gameObject);
 		}
